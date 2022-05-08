@@ -21,22 +21,58 @@ body {
   background-color: #181a1b;
 }
 
-.under-dev-box {
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container__under-dev-box {
   font-size: 3.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
 }
 
-.under-dev-box__icon {
+.container__under-dev-box__icon {
   display: inline;
 }
 
-.under-dev-box__text {
+.container__under-dev-box__text {
   color: white;
   font-family: "Koulen";
   margin: 0 1rem;
   animation: flash;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+
+.container__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgb(68, 68, 68);
+}
+
+.container__footer__icon {
+  font-size: 1.5rem;
+}
+
+.container__footer__email {
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 760px) {
+  .container__under-dev-box {
+    font-size: 2.2rem;
+    flex-direction: column;
+  }
+
+  .container__under-dev-box__icon {
+    display: none;
+  }
 }
